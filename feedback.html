@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>feedback form </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="feedback.css">
+
+</head>
+
+<body>
+  
+
+  <div class="feedback bg-light p-3">
+  <h1>⭐ Feedback Form</h1>
+    <h6 class="text-muted">Please fill the feedback and give your thought's</h6><br>
+  <form id="feedbackForm" action="feedbackform.php" class="form" novalidate>
+    <label for="name">Name :</label>
+    <input id="name" name="name" type="text" class="rounded" placeholder="eg. sahidxyz" aria-describedby="nameError">
+    <small class="text-danger error-text" id="nameError"></small>
+    <br>
+    <label for="email">Email :</label>
+    <input id="email" name="email" type="email" class="rounded" placeholder="(eg. xyz@gmail.com)" aria-describedby="emailError">
+    <small class="text-danger error-text" id="emailError"></small>
+
+
+    <div class="container">
+      <div class="rating-container text-center">
+        <div class="rating-emoji">
+          😊
+        </div>
+        <h3 class="rating-title">How was your experience?</h3>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5">
+          <label for="star5" class="fas fa-star"></label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4" class="fas fa-star"></label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3" class="fas fa-star"></label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2" class="fas fa-star"></label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1" class="fas fa-star"></label>
+        </div>
+        <div class="rating-feedback">
+          <textarea id="feedback" name="feedback" class="form-control" rows="5" placeholder="Tell us about your experience " aria-describedby="feedbackError"></textarea>
+          <small class="text-danger error-text" id="feedbackError"></small>
+        </div>
+        <button type="submit" class="submit-rating">Submit Rating</button>
+        <div id="successMessage" class="alert alert-success mt-3" role="alert" style="display:none"></div>
+      </div>
+    </div>
+
+
+
+  </form>
+  </div>
+  <script src="feedback.js"></script>
+</body>
+
+</html>
